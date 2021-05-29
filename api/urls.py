@@ -15,10 +15,10 @@ router_post_v1.register('v1/group', GroupViewSet,
 router_post_v1.register('v1/follow', FollowViewSet, basename='follow')
 
 urlpatterns = [
-    path('api/v1/token/',
+    path('v1/token/',
          TokenObtainPairView.as_view(),
          name='token_obtain_pair'),
-    path('api/v1/token/refresh/',
+    path('v1/token/refresh/',
          TokenRefreshView.as_view(),
          name='token_refresh'),
     path('', include(router_post_v1.urls)),
